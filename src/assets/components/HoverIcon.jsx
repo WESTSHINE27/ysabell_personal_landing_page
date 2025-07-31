@@ -1,8 +1,6 @@
 import React from 'react';
 
 const HoverIcon = ({ defaultIcon, hoverIcon, alt = 'icon', href = null, size = 64 }) => {
-  const dimensionClass = `w-[${size}px] h-[${size}px]`; // Tailwind does not support dynamic class names, so we use inline styles instead
-
   const iconContent = (
     <div
       className="relative"

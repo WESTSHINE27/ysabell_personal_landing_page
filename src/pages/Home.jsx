@@ -3,8 +3,18 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import HoverIcon from "../assets/components/HoverIcon";
+import PicCarousell from "../assets/components/PicCarousell";
+
 import LandingPic from "../assets/test_resoource/test_title_pic.jpg";
 import PersonalIntroductionPic from "../assets/test_resoource/test_personal_introduction2-removebg-preview.png";
+import PersonalPicForCarousell_1 from "../assets/test_resoource/test_portrail1.jpg";
+import PersonalPicForCarousell_2 from "../assets/test_resoource/test_portrail2.jpg";
+import PersonalPicForCarousell_3 from "../assets/test_resoource/test_portrail3.jpg";
+import PersonalPicForCarousell_4 from "../assets/test_resoource/test_portrail4.jpg";
+import PersonalPicForCarousell_5 from "../assets/test_resoource/test_portrail5.jpg";
+import PersonalPicForCarousell_6 from "../assets/test_resoource/test_portrail6.jpg";
+import PersonalPicForCarousell_7 from "../assets/test_resoource/test_portrail7.jpg";
+import PersonalPicForCarousell_8 from "../assets/test_resoource/test_portrail8.jpg";
 
 import InstagramIcon from "../assets/icons/instagram-lineicon.svg";
 import InstagramIconHover from "../assets/icons/instagram-icon.svg";
@@ -18,7 +28,15 @@ import EmailIconHover from "../assets/icons/email-icon.svg";
 export const Home = () => {
   const introSectionRef = useRef(null);
   const isIntroInView = useInView(introSectionRef, { once: false });
-
+  const images = [
+    PersonalPicForCarousell_1,
+    PersonalPicForCarousell_2,
+    PersonalPicForCarousell_4,
+    PersonalPicForCarousell_5,
+    PersonalPicForCarousell_6,
+    PersonalPicForCarousell_7,
+    PersonalPicForCarousell_8,
+  ];
   return (
     <div className='snap-y snap-mandatory overflow-y-scroll h-screen w-screen bg-gray-900"'>
       {/*
@@ -74,7 +92,7 @@ export const Home = () => {
         <div className="flex-1/2 justify-center items-end flex">
           <img src={PersonalIntroductionPic} className="h-9/10" />
         </div>
-        <div className="flex-1/2 justify-start items-center flex mr-10">
+        <div className="flex-1/2 justify-start items-center flex pr-50">
           <motion.div
             initial={{ height: 0 }}
             animate={isIntroInView ? { height: "80%" } : { height: 0 }}
@@ -82,6 +100,7 @@ export const Home = () => {
             className="w-1.5 mr-6 bg-black"
           />
           <motion.div
+            ref={introSectionRef}
             initial={{
               clipPath: "inset(0 100% 0 0)",
               opacity: 0,
@@ -95,7 +114,7 @@ export const Home = () => {
           >
             <p className="text-4xl font-bold mb-1">Ysabell Tan</p>
             <p className="text-2xl mb-6">Freelancer</p>
-            <p className="text-justify" ref={introSectionRef}>
+            <p className="text-justify">
               This is the description or paragraph content that appears next to
               the vertical line. This is the description or paragraph content
               that appears next to the vertical line. This is the description or
@@ -104,6 +123,16 @@ export const Home = () => {
               vertical line.
             </p>
           </motion.div>
+        </div>
+      </div>
+
+      {/* personal picture carouel section  */}
+      <div className="snap-center h-screen w-full flex flex-col ">
+        <div className="h-1/2 p-0 m-0">
+          <PicCarousell images={images} />
+        </div>
+        <div className="h-1/2 p-0 m-0">
+          <PicCarousell images={images} direction="right" />
         </div>
       </div>
     </div>
