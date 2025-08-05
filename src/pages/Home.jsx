@@ -5,11 +5,12 @@ import { useRef } from "react";
 import HoverIcon from "../assets/components/HoverIcon";
 import ImageAutoScroller from "../assets/components/ImageAutoScroller";
 
+import CoverSection from "../assets/components/CoverSection";
+
 import LandingPic from "../assets/test_resoource/test_title_pic.jpg";
 import PersonalIntroductionPic from "../assets/test_resoource/test_personal_introduction2-removebg-preview.png";
 import PersonalPicForCarousell_1 from "../assets/test_resoource/test_portrail1.jpg";
 import PersonalPicForCarousell_2 from "../assets/test_resoource/test_portrail2.jpg";
-import PersonalPicForCarousell_3 from "../assets/test_resoource/test_portrail3.jpg";
 import PersonalPicForCarousell_4 from "../assets/test_resoource/test_portrail4.jpg";
 import PersonalPicForCarousell_5 from "../assets/test_resoource/test_portrail5.jpg";
 import PersonalPicForCarousell_6 from "../assets/test_resoource/test_portrail6.jpg";
@@ -36,9 +37,9 @@ export const Home = () => {
     PersonalPicForCarousell_6,
     PersonalPicForCarousell_7,
     PersonalPicForCarousell_8,
-  ];
+  ];/*  */
   return (
-    <div className='snap-y snap-mandatory overflow-y-scroll h-screen w-screen bg-gray-900"'>
+    <div className="snap-y snap-mandatory overflow-y-scroll h-screen w-screen bg-white scrollbar-none">
       {/*
        first view
       */}
@@ -56,21 +57,21 @@ export const Home = () => {
                 defaultIcon={InstagramIcon}
                 hoverIcon={InstagramIconHover}
                 alt="Instagram Icon"
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ysabell_tan?igsh=MXQ5OXh2Nzk5bThvaA=="
                 size={100}
               />
               <HoverIcon
                 defaultIcon={TikTokIcon}
                 hoverIcon={TikTokIconHover}
                 alt="Tiktok Icon"
-                href="https://www.instagram.com/"
+                href="https://v.douyin.com/m5WCHpJLRtQ/"
                 size={100}
               />
               <HoverIcon
                 defaultIcon={YoutubeIcon}
                 hoverIcon={YoutubeIconHover}
                 alt="Youtube Icon"
-                href="https://www.instagram.com/"
+                href="https://www.youtube.com/@cays_media"
                 size={100}
               />
               <HoverIcon
@@ -92,7 +93,7 @@ export const Home = () => {
         <div className="flex-1/2 justify-center items-end flex">
           <img src={PersonalIntroductionPic} className="h-9/10" />
         </div>
-        <div className="flex-1/2 justify-start items-center flex pr-50">
+        <div className="flex-1/2 justify-start items-center flex p-16">
           <motion.div
             initial={{ height: 0 }}
             animate={isIntroInView ? { height: "80%" } : { height: 0 }}
@@ -113,21 +114,27 @@ export const Home = () => {
             className="text-black shadow-lg"
           >
             <p className="text-4xl font-bold mb-1">Ysabell Tan</p>
-            <p className="text-2xl mb-6">Freelancer</p>
+            <p className="text-2xl mb-6">Influencer</p>
             <p className="text-justify">
-              This is the description or paragraph content that appears next to
-              the vertical line. This is the description or paragraph content
-              that appears next to the vertical line. This is the description or
-              paragraph content that appears next to the vertical line. This is
-              the description or paragraph content that appears next to the
-              vertical line.
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
+              description... description... description... description...
             </p>
           </motion.div>
         </div>
       </div>
 
+      <CoverSection />
+
       {/* personal picture auto scroller section  */}
-      <div className="snap-center h-screen w-full flex flex-col ">
+      <div className="snap-center h-screen w-full flex flex-col">
         <div className="h-1/2">
           <ImageAutoScroller images={images} direction="right" />
         </div>
