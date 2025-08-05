@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import HoverIcon from "../assets/components/HoverIcon";
-import PicCarousell from "../assets/components/PicCarousell";
+import ImageAutoScroller from "../assets/components/ImageAutoScroller";
 
 import LandingPic from "../assets/test_resoource/test_title_pic.jpg";
 import PersonalIntroductionPic from "../assets/test_resoource/test_personal_introduction2-removebg-preview.png";
@@ -126,13 +126,13 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* personal picture carouel section  */}
+      {/* personal picture auto scroller section  */}
       <div className="snap-center h-screen w-full flex flex-col ">
-        <div className="h-1/2 p-0 m-0">
-          <PicCarousell images={images} />
+        <div className="h-1/2">
+          <ImageAutoScroller images={images} direction="right" />
         </div>
-        <div className="h-1/2 p-0 m-0">
-          <PicCarousell images={images} direction="right" />
+        <div className="h-1/2">
+          <ImageAutoScroller images={images} direction="left" />
         </div>
       </div>
     </div>
