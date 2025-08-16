@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const HoverIcon = ({ defaultIcon, hoverIcon, alt = 'icon', href = null, size = 64 }) => {
+const HoverIcon = ({
+  defaultIcon,
+  hoverIcon,
+  alt = "icon",
+  href = null,
+}) => {
   const iconContent = (
     <div
-      className="relative"
-      style={{ width: `${size}px`, height: `${size}px` }}
+      className="relative size-16 sm:size-18 md:size-24 lg:size-32"
+     
     >
       <img
         src={defaultIcon}

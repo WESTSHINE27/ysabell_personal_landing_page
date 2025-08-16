@@ -3,19 +3,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import HoverIcon from "../assets/components/HoverIcon";
-import ImageAutoScroller from "../assets/components/ImageAutoScroller";
-
 import CoverSection from "../assets/components/CoverSection";
-
-import LandingPic from "../assets/test_resoource/test_title_pic.jpg";
+import ImagesAutoScrollerSection from "../assets/components/ImagesAutoScrollerSection";
+import MusicPlayer from "../assets/components/MusicPlayer";
+import LandingPic from "../assets/test_resoource/landing-pic.png";
 import PersonalIntroductionPic from "../assets/test_resoource/test_personal_introduction2-removebg-preview.png";
-import PersonalPicForCarousell_1 from "../assets/test_resoource/test_portrail1.jpg";
-import PersonalPicForCarousell_2 from "../assets/test_resoource/test_portrail2.jpg";
-import PersonalPicForCarousell_4 from "../assets/test_resoource/test_portrail4.jpg";
-import PersonalPicForCarousell_5 from "../assets/test_resoource/test_portrail5.jpg";
-import PersonalPicForCarousell_6 from "../assets/test_resoource/test_portrail6.jpg";
-import PersonalPicForCarousell_7 from "../assets/test_resoource/test_portrail7.jpg";
-import PersonalPicForCarousell_8 from "../assets/test_resoource/test_portrail8.jpg";
 
 import InstagramIcon from "../assets/icons/instagram-lineicon.svg";
 import InstagramIconHover from "../assets/icons/instagram-icon.svg";
@@ -29,27 +21,19 @@ import EmailIconHover from "../assets/icons/email-icon.svg";
 export const Home = () => {
   const introSectionRef = useRef(null);
   const isIntroInView = useInView(introSectionRef, { once: false });
-  const images = [
-    PersonalPicForCarousell_1,
-    PersonalPicForCarousell_2,
-    PersonalPicForCarousell_4,
-    PersonalPicForCarousell_5,
-    PersonalPicForCarousell_6,
-    PersonalPicForCarousell_7,
-    PersonalPicForCarousell_8,
-  ];/*  */
+
   return (
     <div className="snap-y snap-mandatory overflow-y-scroll h-screen w-screen bg-white scrollbar-none">
       {/*
        first view
       */}
       <div
-        className="snap-center h-screen w-full bg-cover bg-center"
+        className="snap-start h-[100dvh] w-full bg-cover bg-[center_top]"
         style={{ backgroundImage: `url(${LandingPic})` }}
       >
         <div className="h-full justify-center items-center flex">
           <div className="w-fit">
-            <p className="font-julius text-9xl text-white drop-shadow-lg">
+            <p className="font-julius text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white drop-shadow-lg text-center">
               Ysabell Tan
             </p>
             <div className="flex w-full justify-between p-4">
@@ -58,48 +42,60 @@ export const Home = () => {
                 hoverIcon={InstagramIconHover}
                 alt="Instagram Icon"
                 href="https://www.instagram.com/ysabell_tan?igsh=MXQ5OXh2Nzk5bThvaA=="
-                size={100}
               />
               <HoverIcon
                 defaultIcon={TikTokIcon}
                 hoverIcon={TikTokIconHover}
                 alt="Tiktok Icon"
                 href="https://v.douyin.com/m5WCHpJLRtQ/"
-                size={100}
               />
               <HoverIcon
                 defaultIcon={YoutubeIcon}
                 hoverIcon={YoutubeIconHover}
                 alt="Youtube Icon"
                 href="https://www.youtube.com/@cays_media"
-                size={100}
               />
               <HoverIcon
                 defaultIcon={EmailIcon}
                 hoverIcon={EmailIconHover}
                 alt="Email Icon"
                 href="https://www.instagram.com/"
-                size={100}
               />
             </div>
           </div>
         </div>
       </div>
 
-      {/*
-       second view
-      */}
-      <div className="snap-center h-screen w-full flex p-8">
-        <div className="flex-1/2 justify-center items-end flex">
-          <img src={PersonalIntroductionPic} className="h-9/10" />
+      <div className="snap-start h-[100dvh] w-full flex flex-col md:flex-row">
+        {/* Image section */}
+        <div className="flex justify-center items-center h-1/2 md:h-full md:w-1/2 p-4">
+          <img
+            src={PersonalIntroductionPic}
+            alt="Personal"
+            className="h-full w-full object-contain"
+          />
         </div>
-        <div className="flex-1/2 justify-start items-center flex p-16">
+
+        {/* Line separator */}
+        {/* Horizontal for mobile */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={isIntroInView ? { width: "90%" } : { width: 0 }}
+          transition={{ duration: 1 }}
+          className="block md:hidden h-0.5 bg-black mx-auto"
+        />
+        {/* Vertical for desktop */}
+        <div className="hidden md:flex items-center">
           <motion.div
             initial={{ height: 0 }}
             animate={isIntroInView ? { height: "80%" } : { height: 0 }}
             transition={{ duration: 2 }}
-            className="w-1.5 mr-6 bg-black"
+            className="w-1 bg-black"
           />
+        </div>
+
+        {/* Text section */}
+        <div className="flex justify-start items-start md:items-center h-1/2 md:h-full md:w-1/2 pt-4 pr-8 pl-8 md:p-8">
           <motion.div
             ref={introSectionRef}
             initial={{
@@ -110,20 +106,16 @@ export const Home = () => {
               clipPath: isIntroInView ? "inset(0 0% 0 0)" : "inset(0 100% 0 0)",
               opacity: isIntroInView ? 1 : 0,
             }}
-            transition={{ duration: 2, ease: "easeOut" }}
-            className="text-black shadow-lg"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-black shadow-lg max-w-xl"
           >
-            <p className="text-4xl font-bold mb-1">Ysabell Tan</p>
-            <p className="text-2xl mb-6">Influencer</p>
-            <p className="text-justify">
-              description... description... description... description...
-              description... description... description... description...
-              description... description... description... description...
-              description... description... description... description...
-              description... description... description... description...
-              description... description... description... description...
-              description... description... description... description...
-              description... description... description... description...
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold md:mb-1">
+              Ysabell Tan
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl mb-1 md:mb-6">
+              Influencer
+            </p>
+            <p className="text-justify text-sm sm:text-base">
               description... description... description... description...
               description... description... description... description...
             </p>
@@ -131,17 +123,25 @@ export const Home = () => {
         </div>
       </div>
 
-      <CoverSection />
-
-      {/* personal picture auto scroller section  */}
-      <div className="snap-center h-screen w-full flex flex-col">
-        <div className="h-1/2">
-          <ImageAutoScroller images={images} direction="right" />
+      <div className="snap-start h-[100dvh] w-full flex justify-center items-center bg-[#765848] flex-col md:flex-row ">
+        <div className="flex items-end justify-center md:items-center h-3/5 md:h-full w-full md:w-1/2 pb-4 md:pb-0">
+          <MusicPlayer />
         </div>
-        <div className="h-1/2">
-          <ImageAutoScroller images={images} direction="left" />
+        <div className="flex h-2/5 md:h-full w-full md:w-1/2 flex-col items-center md:items-start md:justify-center text-white pt-6 pb-6 pl-8 pr-8 md:p-12 lg:p-16">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold md:mb-1 text-center">
+            About Me
+          </p>
+          <p className="text-center md:text-justify text-sm sm:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do
+            elusmod tempor incididuntt labore et lolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          </p>
         </div>
       </div>
+
+      <CoverSection />
+      <ImagesAutoScrollerSection />
     </div>
   );
 };

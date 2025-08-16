@@ -22,7 +22,7 @@ const CoverSection = () => {
   };
 
   return (
-    <div className="snap-center h-screen w-full relative">
+    <div className="snap-start overflow-hidden h-[100dvh] w-full relative">
       <video
         ref={videoRef}
         src={CoverVideo}
