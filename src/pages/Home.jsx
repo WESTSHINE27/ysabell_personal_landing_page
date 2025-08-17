@@ -3,9 +3,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import HoverIcon from "../assets/components/HoverIcon";
-import CoverSection from "../assets/components/CoverSection";
 import ImagesAutoScrollerSection from "../assets/components/ImagesAutoScrollerSection";
-import MusicPlayer from "../assets/components/MusicPlayer";
+import MusicPlayerSection from "../assets/components/MusicPlayerSection";
+import HoverSlideShow from "../assets/components/HoverSlideShow";
+
 import LandingPic from "../assets/test_resoource/landing-pic.png";
 import PersonalIntroductionPic from "../assets/test_resoource/test_personal_introduction2-removebg-preview.png";
 
@@ -122,25 +123,81 @@ export const Home = () => {
           </motion.div>
         </div>
       </div>
+      <MusicPlayerSection />
 
-      <div className="snap-start h-[100dvh] w-full flex justify-center items-center bg-[#765848] flex-col md:flex-row ">
-        <div className="flex items-end justify-center md:items-center h-3/5 md:h-full w-full md:w-1/2 pb-4 md:pb-0">
-          <MusicPlayer />
-        </div>
-        <div className="flex h-2/5 md:h-full w-full md:w-1/2 flex-col items-center md:items-start md:justify-center text-white pt-6 pb-6 pl-8 pr-8 md:p-12 lg:p-16">
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bold md:mb-1 text-center">
-            About Me
-          </p>
-          <p className="text-center md:text-justify text-sm sm:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do
-            elusmod tempor incididuntt labore et lolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip.
-          </p>
-        </div>
+
+      <div className="hidden md:flex snap-start h-[100dvh] w-full">
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
       </div>
 
-      <CoverSection />
+      {/* Mobile: 2 per screen */}
+      <div className="md:hidden snap-start h-[100dvh] w-full flex flex-col">
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
+      </div>
+
+      <div className="md:hidden snap-start h-[100dvh] w-full flex flex-col">
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
+        <HoverSlideShow
+          images={[
+            LandingPic,
+            PersonalIntroductionPic,
+            LandingPic,
+            PersonalIntroductionPic,
+          ]}
+          label="PUMA"
+        />
+      </div>
       <ImagesAutoScrollerSection />
     </div>
   );
