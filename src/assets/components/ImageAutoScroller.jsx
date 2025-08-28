@@ -1,14 +1,14 @@
 import React from "react";
 
 const ImageAutoScroller = ({ images, direction = "left" }) => {
-    const animationClass =
+  const animationClass =
     direction === "left"
       ? "animate-infinite-scroll-left"
       : "animate-infinite-scroll-right";
-    return (
+  return (
     <div className="overflow-hidden w-full h-full flex">
       <div className={`${animationClass} h-full items-center`}>
-      {[...images, ...images].map((image) => {
+        {[...images, ...images].map((image) => {
           return (
             <img
               src={image}

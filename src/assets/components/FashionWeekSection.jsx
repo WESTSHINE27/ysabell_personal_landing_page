@@ -9,33 +9,13 @@ import Fw4Pic from "../../assets/test_resoource/fw-4.png";
 import Fw5Pic from "../../assets/test_resoource/fw-5.jpg";
 
 const FashionWeekSection = () => {
- 
-
   const fashionWeekRef = useRef(null);
   const isFashionWeekInView = useInView(fashionWeekRef, { once: false });
   return (
     <>
       {/* Mobile View */}
       <div className="md:hidden">
-        <div className="relative snap-start min-h-screen w-full pt-6">
-          <div
-            className="h-full flex flex-col items-center justify-start rounded-t-3xl bg-black text-white 
-          shadow-[0_-8px_10px_rgba(0,0,0,0.6)] p-6"
-          >
-            <p className="font-italiana text-7xl">FEATURE</p>
-            <img src={Fw2Pic} className="object-contain"></img>
-            <div className="flex flex-col items-center justify-center text-center p-6">
-              <p className="text-xl font-bold pb-2">As Seen in VOGUE</p>
-              <p>
-                One of my proudest moments was having my work featured in VOGUE.
-                It was an opportunity to share my vision and creativity with a
-                wider audience. You can view the published feature here.
-              </p>
-            </div>
-            <img src={Fw2Pic} className="object-contain pb-6"></img>
-            <img src={Fw2Pic} className="object-contain"></img>
-          </div>
-        </div>
+        
 
         <div className=" relative snap-start min-h-screen w-full bg-black p-6 text-white items-center justify-center flex flex-col">
           <div className="relative w-full">
@@ -103,8 +83,7 @@ const FashionWeekSection = () => {
       </div>
 
       {/* Desktop View */}
-      <FashionWeekDesktopView/>
-      
+      <FashionWeekDesktopView />
     </>
   );
 };

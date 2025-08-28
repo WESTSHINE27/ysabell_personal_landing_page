@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 // Hook to check if screen is smaller than md (768px by default)
 const useIsMobile = (breakpoint = 768) => {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+    typeof window !== "undefined" ? window.innerWidth < breakpoint : false,
   );
 
   useEffect(() => {

@@ -16,7 +16,7 @@ const images = [
   PersonalPicForCarousell_6,
   PersonalPicForCarousell_7,
   PersonalPicForCarousell_8,
-]; 
+];
 const ImagesAutoScrollerSection = () => {
   return (
     <div className="snap-center h-screen w-full flex flex-col">

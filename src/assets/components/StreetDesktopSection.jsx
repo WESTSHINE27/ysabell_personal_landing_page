@@ -62,8 +62,16 @@ const StreetDesktopSection = () => {
             </p>
           </motion.div>
           <div class="flex-1 flex gap-6 overflow-hidden pt-6">
-            <img src={Pic1_2_2} loading="lazy" className="w-1/2 h-full object-cover" />
-            <img src={Pic1_2_3} loading="lazy" className="w-1/2 h-full object-cover" />
+            <img
+              src={Pic1_2_2}
+              loading="lazy"
+              className="w-1/2 h-full object-cover"
+            />
+            <img
+              src={Pic1_2_3}
+              loading="lazy"
+              className="w-1/2 h-full object-cover"
+            />
           </div>
         </div>
       </motion.div>

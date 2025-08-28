@@ -19,9 +19,9 @@
   scrollbar-width: none; /* Firefox */
 }
 
-@theme{
+@theme {
   --font-julius: Julius Sans One, "sans-serif";
-  --font-italiana: Italiana Regular, "sans-serif" 
+  --font-italiana: Italiana Regular, "sans-serif";
 }
 
 @keyframes infinite-scroll-right {
@@ -54,7 +54,6 @@
   width: fit-content;
 }
 
-
 /* Music Player CSS Part */
 input[type="range"] {
   -webkit-appearance: none;
@@ -85,5 +84,3 @@ input[type="range"]::-moz-range-thumb {
   background: transparent;
   border: none;
 }
-
-
