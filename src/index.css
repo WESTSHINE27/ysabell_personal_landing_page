@@ -19,11 +19,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-@theme {
-  --font-julius: Julius Sans One, "sans-serif";
-  --font-italiana: Italiana Regular, "sans-serif";
-}
-
 @keyframes infinite-scroll-right {
   0% {
     transform: translateX(0);
@@ -54,7 +49,7 @@
   width: fit-content;
 }
 
-/* Music Player CSS Part */
+/* Music Player Playing Progress Bar */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -69,7 +64,7 @@ input[type="range"] {
   outline: none;
 }
 
-/* Hide the circle */
+/* Hide the Music Player Playing Progress Bar's circle */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -83,4 +78,22 @@ input[type="range"]::-moz-range-thumb {
   height: 0;
   background: transparent;
   border: none;
+}
+
+@layer components {
+  .div-padding {
+    @apply px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-12 lg:px-12 lg:py-16 xl:px-12 xl:py-16 2xl:px-12 2xl:py-16;
+  }
+  .div-gap {
+    @apply gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12;
+  }
+}
+
+@theme {
+  --font-julius: Julius Sans One, "sans-serif";
+  --font-italiana: Italiana Regular, "sans-serif";
+  --breakpoint-xs: 360px;
+  --breakpoint-sm-mob: 400px;
+  --breakpoint-md-mob: 480px;
+  --breakpoint-lg-mob: 540px;
 }

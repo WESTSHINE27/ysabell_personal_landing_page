@@ -13,7 +13,7 @@ export const Home = () => {
       <div className="scrollbar-none h-screen w-screen snap-y snap-mandatory overflow-y-scroll bg-white">
         <LandingSection />
         <div className="snap-start">
-          <div className="sticky top-0 z-0 flex h-[100dvh] w-full flex-col gap-4 px-4 py-6 sm:px-6 sm:py-8 md:gap-6 md:px-8 md:py-12 lg:flex-row lg:gap-8 lg:px-12 lg:py-16 xl:gap-12">
+          <div className="sticky top-0 z-0 flex h-[100dvh] w-full flex-col lg:flex-row div-padding div-gap">
             <IntroductionSection />
           </div>
 

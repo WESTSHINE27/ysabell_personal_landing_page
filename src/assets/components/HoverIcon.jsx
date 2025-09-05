@@ -2,18 +2,18 @@ import React from "react";
 
 const HoverIcon = ({ defaultIcon, hoverIcon, alt = "icon", href = null }) => {
   const iconContent = (
-    <div className="relative size-16 sm:size-18 md:size-24 lg:size-32 group">
+    <div className="group relative size-16 sm:size-18 md:size-24 lg:size-32 xl:size-36 2xl:size-42">
       {/* Default Icon */}
       <img
         src={defaultIcon}
         alt={alt}
-        className="absolute inset-0 w-full h-full transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+        className="absolute inset-0 h-full w-full opacity-100 transition-opacity duration-300 group-hover:opacity-0"
       />
       {/* Hover Icon */}
       <img
         src={hoverIcon}
         alt={alt}
-        className="absolute inset-0 w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+        className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
     </div>
   );

@@ -28,7 +28,20 @@
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^4.1.12",
     "vite": "^7.0.4"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WESTSHINE27/ysabell_personal_landing_page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WESTSHINE27/ysabell_personal_landing_page/issues"
+  },
+  "homepage": "https://github.com/WESTSHINE27/ysabell_personal_landing_page#readme"
 }

@@ -1,20 +1,28 @@
-import React from "react";
-
 const TwoColumnImageSection = ({
   leftImage,
   rightImage,
   altLeft = "",
   altRight = "",
+  leftSrcSet = "",
+  rightSrcSet = "",
 }) => {
   return (
     <>
-      <div className="w-1/2 h-full flex justify-end">
-        <img src={leftImage} alt={altLeft} className="h-full object-contain" />
+      <div className="flex h-full w-1/2 justify-end">
+        <img
+          src={leftImage}
+          alt={altLeft}
+          srcSet={leftSrcSet}
+          loading="lazy"
+          className="h-full object-contain"
+        />
       </div>
-      <div className="w-1/2 h-full flex justify-start">
+      <div className="flex h-full w-1/2 justify-start">
         <img
           src={rightImage}
+          srcSet={rightSrcSet}
           alt={altRight}
+          loading="lazy"
           className="h-full object-contain"
         />
       </div>

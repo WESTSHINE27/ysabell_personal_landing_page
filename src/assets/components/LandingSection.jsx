@@ -12,17 +12,17 @@ import LandingPic from "../../assets/test_resoource/landing-pic.png";
 const LandingSection = () => {
   return (
     <div
-      className="h-[100dvh] w-full snap-start bg-cover bg-[center_top] px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-12 lg:px-12 lg:py-16"
+      className="h-[100dvh] w-full snap-start bg-cover bg-[center_top] div-padding"
       style={{ backgroundImage: `url(${LandingPic})` }}
     >
       <div className="flex h-full items-center justify-center">
         <div className="w-fit">
           {/* Name */}
-          <p className="font-julius text-center text-6xl text-white drop-shadow-lg sm:text-7xl md:text-8xl lg:text-9xl">
+          <h1 className="font-julius text-center text-6xl text-white drop-shadow-lg sm:text-7xl md:text-8xl lg:text-9xl xl:text-[9rem] 2xl:text-[10rem]">
             Ysabell Tan
-          </p>
+          </h1>
           {/* Icon div */}
-          <div className="flex w-full justify-between p-4">
+          <div className="flex w-full justify-between">
             <HoverIcon
               defaultIcon={InstagramIcon}
               hoverIcon={InstagramIconHover}

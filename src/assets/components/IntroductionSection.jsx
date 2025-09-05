@@ -35,7 +35,7 @@ const IntroductionSection = () => {
       </div>
 
       {/* Text section */}
-      <div className="flex h-[calc(40dvh-1rem)] flex-col items-start justify-start px-6 pb-8 md:px-8 md:pb-10 lg:py-10 lg:h-full lg:w-1/2 lg:items-center lg:justify-center">
+      <div className="flex h-[calc(40dvh-1rem)] flex-col items-start justify-start px-6 pb-8 md:px-8 md:pb-10 lg:h-full lg:w-1/2 lg:items-center lg:justify-center lg:py-10">
         {/* Animation div for text */}
         <motion.div
           ref={introSectionRef}
@@ -48,18 +48,18 @@ const IntroductionSection = () => {
             opacity: isIntroInView ? 1 : 0,
           }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="max-h-full w-full overflow-y-auto lg:h-[80%]"
+          className="scrollbar-none max-h-fit w-full overflow-y-auto lg:h-[80%]"
         >
           {/* Name */}
-          <p className="text-2xl font-bold sm:text-3xl md:mb-1 md:text-4xl lg:text-5xl">
+          <p className="text-2xl font-bold sm-mob:text-3xl sm:text-3xl md:mb-1 md:text-4xl lg:text-5xl">
             Ysabell Tan
           </p>
           {/* Position */}
-          <p className="mb-1 text-lg sm:text-xl md:mb-6 md:text-2xl lg:text-3xl">
+          <p className="sm-mob:text-xl mb-1 text-lg sm:text-xl md:mb-4 md:text-2xl lg:text-3xl">
             Influencer
           </p>
           {/* Description */}
-          <p className="text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+          <p className="sm-mob:text-base text-justify text-sm sm:text-base md:text-lg lg:text-xl">
             Ysabel is a sweet style girl, you'll often see her sweet smile,
             which is her signature. She can also pull off a sporty look with
             energy. Beside photos, Ysabel will also make some trending reels

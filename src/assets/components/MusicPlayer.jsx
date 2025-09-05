@@ -54,7 +54,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="p-4 flex flex-col w-56 md:w-64 lg:w-76">
+    <div className="flex w-56 flex-col p-4 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-88">
       {/* Time display above progress bar */}
 
       {/* Progress Bar */}
@@ -68,24 +68,24 @@ const MusicPlayer = () => {
         style={{
           "--progress": `${(currentTime / duration) * 100}%`,
         }}
-        className="mb-1"
+        className="mb-1 cursor-pointer"
       />
 
-      <div className="flex justify-between text-sm text-white pb-2">
+      <div className="flex justify-between pb-2 text-sm lg:text-base text-white">
         <span>{formatTime(currentTime)}</span>
         <span>-{formatTime(duration - currentTime)}</span>
       </div>
 
       {/* Play / Pause Button */}
-      <div className="flex gap-1">
+      <div className="flex gap-1 sm:gap-2">
         <button
           onClick={togglePlay}
-          className=" rounded-lg flex items-center justify-center bg-white text-[#765848] w-16 h-12 cursor-pointer"
+          className="flex h-11 w-15 cursor-pointer items-center justify-center rounded-lg bg-white text-[#765848] sm:h-12 sm:w-16 md:h-13 md:w-18 lg:w-20 lg:h-14"
         >
           <img
             src={isPlaying ? PauseIcon : PlayIcon}
             alt={isPlaying ? "Pause" : "Play"}
-            className="w-6 h-6"
+            className="h-6 w-6"
           />
         </button>
 
@@ -94,7 +94,7 @@ const MusicPlayer = () => {
           target="_blank"
           className="block w-full"
         >
-          <button className=" bg-white text-[#765848] rounded-lg w-full h-12 cursor-pointer">
+          <button className="sm-mob:text-base h-11 w-full cursor-pointer rounded-lg bg-white text-sm text-[#765848] sm:h-12 lg:h-14 sm:text-base md:h-13 md:text-lg lg:text-xl">
             Play on Youtube
           </button>
         </a>
