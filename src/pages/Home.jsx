@@ -10,7 +10,7 @@ import VougeMobileSection from "../assets/components/VougeMobileSection";
 export const Home = () => {
   return (
     <div>
-      <div className="scrollbar-none h-screen w-screen snap-y snap-mandatory overflow-y-scroll bg-white">
+      <div className="scrollbar-none h-screen w-screen snap-y snap-mandatory overflow-y-scroll  overflow-x-hidden bg-white">
         <LandingSection />
         <div className="snap-start">
           <div className="sticky top-0 z-0 flex h-[100dvh] w-full flex-col lg:flex-row div-padding div-gap">
