@@ -1,6 +1,10 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import PersonalIntroductionPic from "../../assets/test_resoource/test_personal_introduction2-removebg-preview.png";
+import Personal_Pic from "../imgs/personal-pic.webp";
+import Personal_Pic_400 from "../imgs/personal-pic-400.webp";
+import Personal_Pic_800 from "../imgs/personal-pic-800.webp";
+import Personal_Pic_1600 from "../imgs/personal-pic-1600.webp";
+import Personal_Pic_2560 from "../imgs/personal-pic-2560.webp";
 
 const IntroductionSection = () => {
   const introSectionRef = useRef(null);
@@ -11,7 +15,14 @@ const IntroductionSection = () => {
       <div className="flex h-3/5 items-center justify-center p-4 lg:h-full lg:w-1/2">
         <img
           alt="photo"
-          src={PersonalIntroductionPic}
+          src={Personal_Pic}
+          srcSet={`
+            ${Personal_Pic_400} 400w,
+            ${Personal_Pic_800} 800w,
+            ${Personal_Pic_1600} 1600w,
+            ${Personal_Pic_2560} 2560w,
+            ${Personal_Pic} 4160w
+          `}
           loading="lazy"
           className="h-full w-full object-contain"
         />
@@ -51,7 +62,7 @@ const IntroductionSection = () => {
           className="scrollbar-none max-h-fit w-full overflow-y-auto lg:h-[80%]"
         >
           {/* Name */}
-          <p className="text-2xl font-bold sm-mob:text-3xl sm:text-3xl md:mb-1 md:text-4xl lg:text-5xl">
+          <p className="sm-mob:text-3xl text-2xl font-bold sm:text-3xl md:mb-1 md:text-4xl lg:text-5xl">
             Ysabell Tan
           </p>
           {/* Position */}
@@ -65,13 +76,7 @@ const IntroductionSection = () => {
             energy. Beside photos, Ysabel will also make some trending reels
             such as popular K-pop videos or TikTok trend ! When creating an
             advertise reels, she find creative ways to present the content and
-            make it interesting. apple apple apple apple apple apple apple apple
-            apple apple apple apple apple apple apple apple apple applele apple
-            apple apple apple apple apple apple apple applele apple apple apple
-            apple apple apple apple apple applele apple apple apple apple apple
-            apple apple apple applele apple apple apple apple apple apple apple
-            apple applele apple apple apple apple apple apple apple apple
-            applele apple apple apple apple apple apple apple apple apple
+            make it interesting.
           </p>
         </motion.div>
       </div>

@@ -7,14 +7,29 @@ import YoutubeIcon from "../../assets/icons/youtube-lineicon.svg";
 import YoutubeIconHover from "../../assets/icons/youtube-icon.svg";
 import EmailIcon from "../../assets/icons/email-lineicon.svg";
 import EmailIconHover from "../../assets/icons/email-icon.svg";
-import LandingPic from "../../assets/test_resoource/landing-pic.png";
+import Landing_Pic from "../../assets/imgs/landing-pic.webp";
+import Landing_Pic_2560 from "../../assets/imgs/landing-pic-2560.webp";
+import Landing_Pic_1600 from "../../assets/imgs/landing-pic-1600.webp";
+import Landing_Pic_800 from "../../assets/imgs/landing-pic-800.webp";
+import Landing_Pic_400 from "../../assets/imgs/landing-pic-400.webp";
 
 const LandingSection = () => {
   return (
-    <div
-      className="h-[100dvh] w-full snap-start bg-cover bg-[center_top] div-padding"
-      style={{ backgroundImage: `url(${LandingPic})` }}
-    >
+    <div className="div-padding relative h-[100dvh] w-full snap-start overflow-hidden">
+      <img
+        src={Landing_Pic}
+        srcSet={`
+                    ${Landing_Pic_400} 400w,
+                    ${Landing_Pic_800} 800w,
+                    ${Landing_Pic_1600} 1600w,
+                    ${Landing_Pic_2560} 2560w,
+                    ${Landing_Pic} 4160w
+                  `}
+        sizes="100vw"
+        alt="Landing background"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-top"
+      />
       <div className="flex h-full items-center justify-center">
         <div className="w-fit">
           {/* Name */}

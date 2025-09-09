@@ -7,15 +7,18 @@ const MusicPlayerSection = () => {
         <MusicPlayer />
       </div>
       <div className="flex h-2/5 w-full pt-6 pr-8 pb-6 pl-8 md:p-12 lg:h-full lg:w-1/2 lg:p-16">
-        <div className="flex h-full w-full flex-col items-center text-white lg:h-full xl:w-4/5 lg:items-start lg:justify-center">
-          <p className="sm-mob:text-xl text-center text-lg font-bold sm:text-xl md:text-2xl lg:mb-1 lg:text-3xl ">
+        <div className="flex h-full w-full flex-col items-center text-white lg:h-full lg:items-start lg:justify-center xl:w-4/5">
+          <p className="sm-mob:text-xl text-center text-lg font-bold sm:text-xl md:text-2xl lg:mb-1 lg:text-3xl">
             About Me
           </p>
           <p className="sm-mob:text-base text-center text-sm sm:text-base md:text-lg lg:text-justify lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do
-            elusmod tempor incididuntt labore et lolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip.
+            I’ve loved singing since I was a child — spending my after-school
+            time listening to music and singing along. Growing up, I joined
+            school competitions and gained confidence from the experiences. Now,
+            I enjoy learning and covering songs I love, especially trending
+            ones, and I dream of building a music career in the future. Thank
+            you for listening and being part of my journey — your support means
+            the world to me!
           </p>
         </div>
       </div>

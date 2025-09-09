@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Pic_3_1 from "../imgs/fashion-week-pic-3-1.webp";
 import Pic_3_1_400 from "../imgs/fashion-week-pic-3-1-400.webp";
-import Pic1_3_1_800 from "../imgs/fashion-week-pic-3-1-800.webp";
+import Pic_3_1_800 from "../imgs/fashion-week-pic-3-1-800.webp";
 import Pic_3_1_1600 from "../imgs/fashion-week-pic-3-1-1600.webp";
 import Pic_3_1_2560 from "../imgs/fashion-week-pic-3-1-2560.webp";
 import Pic_3_2 from "../imgs/fashion-week-pic-3-2.webp";
@@ -80,7 +80,7 @@ const FashionWeekDesktopGallerySection = () => {
             src={Pic_3_1}
             srcSet={`
               ${Pic_3_1_400} 400w,
-              ${Pic1_3_1_800} 800w,
+              ${Pic_3_1_800} 800w,
               ${Pic_3_1_1600} 1600w,
               ${Pic_3_1_2560} 2560w,
               ${Pic_3_1} 4160w

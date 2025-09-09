@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import CoverMusic from "../music/cover-music.mp3";
-import CoverPic from "../test_resoource/cover.png";
+import Cover_Pic from "../imgs/cover-pic.webp";
+import Cover_Pic_2560 from "../imgs/cover-pic-2560.webp";
+import Cover_Pic_1600 from "../imgs/cover-pic-1600.webp";
+import Cover_Pic_800 from "../imgs/cover-pic-800.webp";
+import Cover_Pic_400 from "../imgs/cover-pic-400.webp";
 import PlayIcon from "../icons/coco-play-icon.png";
 import PauseIcon from "../icons/coco-pause-icon.png";
 
@@ -58,7 +62,18 @@ const MusicPlayer = () => {
       {/* Time display above progress bar */}
 
       {/* Progress Bar */}
-      <img className="pb-4" src={CoverPic}></img>
+      <img
+        className="pb-4"
+        src={Cover_Pic}
+        loading="lazy"
+        srcSet={`
+          ${Cover_Pic_400} 400w,
+          ${Cover_Pic_800} 800w,
+          ${Cover_Pic_1600} 1600w,
+          ${Cover_Pic_2560} 2560w,
+          ${Cover_Pic} 4160w
+        `}
+      />
       <input
         type="range"
         min="0"
@@ -71,7 +86,7 @@ const MusicPlayer = () => {
         className="mb-1 cursor-pointer"
       />
 
-      <div className="flex justify-between pb-2 text-sm lg:text-base text-white">
+      <div className="flex justify-between pb-2 text-sm text-white lg:text-base">
         <span>{formatTime(currentTime)}</span>
         <span>-{formatTime(duration - currentTime)}</span>
       </div>
@@ -80,7 +95,7 @@ const MusicPlayer = () => {
       <div className="flex gap-1 sm:gap-2">
         <button
           onClick={togglePlay}
-          className="flex h-11 w-15 cursor-pointer items-center justify-center rounded-lg bg-white text-[#765848] sm:h-12 sm:w-16 md:h-13 md:w-18 lg:w-20 lg:h-14"
+          className="flex h-11 w-15 cursor-pointer items-center justify-center rounded-lg bg-white text-[#765848] sm:h-12 sm:w-16 md:h-13 md:w-18 lg:h-14 lg:w-20"
         >
           <img
             src={isPlaying ? PauseIcon : PlayIcon}
@@ -94,7 +109,7 @@ const MusicPlayer = () => {
           target="_blank"
           className="block w-full"
         >
-          <button className="sm-mob:text-base h-11 w-full cursor-pointer rounded-lg bg-white text-sm text-[#765848] sm:h-12 lg:h-14 sm:text-base md:h-13 md:text-lg lg:text-xl">
+          <button className="sm-mob:text-base h-11 w-full cursor-pointer rounded-lg bg-white text-sm text-[#765848] sm:h-12 sm:text-base md:h-13 md:text-lg lg:h-14 lg:text-xl">
             Play on Youtube
           </button>
         </a>

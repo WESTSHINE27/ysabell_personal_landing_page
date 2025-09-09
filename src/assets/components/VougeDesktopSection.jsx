@@ -15,7 +15,7 @@ const VougeDesktopSection = () => {
     <div className="div-padding flex h-full w-full items-center justify-start rounded-t-3xl bg-black text-white shadow-[0_-8px_10px_rgba(0,0,0,0.6)]">
       <motion.div
         ref={vougeDesktopPageRef}
-        className="flex h-full w-full flex-3/5 flex-col"
+        className="flex h-full w-full flex-3/5 flex-col justify-between"
         initial="hidden"
         animate={isVougeDesktopPageInView ? "show" : "hidden"}
         variants={{
